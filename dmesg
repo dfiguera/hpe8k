@@ -1,0 +1,712 @@
+[    0.000000] lit.home.arpa kernel: Linux version 6.1.1-arch1-4-hpe8k (linux-hpe8k@archlinux) (gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.39.0) #5 SMP PREEMPT_DYNAMIC Sun, 01 Jan 2023 02:48:04 +0000
+[    0.000000] lit.home.arpa kernel: Command line: BOOT_IMAGE=../vmlinuz-linux-hpe8k root=/dev/sda2 rw l1tf=full,force spec_store_bypass_disable=on spectre_v2=on l1d_flush=on apparmor=1 lsm=lockdown,yama,apparmor lockdown=confidentiality init_on_alloc=1 init_on_free=1 page_alloc.shuffle=1 slab_nomerge vsyscall=none slub_debug=FZP randomize_kstack_offset=1 initrd=../initramfs-linux-hpe8k.img
+[    0.000000] lit.home.arpa kernel: KERNEL supported cpus:
+[    0.000000] lit.home.arpa kernel:   Intel GenuineIntel
+[    0.000000] lit.home.arpa kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] lit.home.arpa kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] lit.home.arpa kernel: x86/fpu: Enabled xstate features 0x3, context size is 576 bytes, using 'standard' format.
+[    0.000000] lit.home.arpa kernel: signal: max sigframe size: 1104
+[    0.000000] lit.home.arpa kernel: BIOS-provided physical RAM map:
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009f7ff] usable
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x000000000009f800-0x000000000009ffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000000e8000-0x00000000000fffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000dd7a163f] usable
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000dd7a1640-0x00000000dd7a369f] ACPI NVS
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000dd7a36a0-0x00000000dfffffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000f4000000-0x00000000f7ffffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fed3ffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x00000000fed45000-0x00000000ffffffff] reserved
+[    0.000000] lit.home.arpa kernel: BIOS-e820: [mem 0x0000000100000000-0x000000011bffffff] usable
+[    0.000000] lit.home.arpa kernel: Kernel is locked down from command line; see man kernel_lockdown.7
+[    0.000000] lit.home.arpa kernel: NX (Execute Disable) protection: active
+[    0.000000] lit.home.arpa kernel: SMBIOS 2.6 present.
+[    0.000000] lit.home.arpa kernel: DMI: Hewlett-Packard HP Compaq 8000 Elite USDT PC/3648h, BIOS 786G7 v01.02 10/22/2009
+[    0.000000] lit.home.arpa kernel: tsc: Fast TSC calibration using PIT
+[    0.000000] lit.home.arpa kernel: tsc: Detected 3159.014 MHz processor
+[    0.000960] lit.home.arpa kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000963] lit.home.arpa kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000968] lit.home.arpa kernel: last_pfn = 0x11c000 max_arch_pfn = 0x400000000
+[    0.002227] lit.home.arpa kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.002546] lit.home.arpa kernel: total RAM covered: 7640M
+[    0.002721] lit.home.arpa kernel: Found optimal setting for mtrr clean up
+[    0.002721] lit.home.arpa kernel:  gran_size: 64K         chunk_size: 1G         num_reg: 5          lose cover RAM: 0G
+[    0.003842] lit.home.arpa kernel: e820: update [mem 0xdd800000-0xffffffff] usable ==> reserved
+[    0.003849] lit.home.arpa kernel: last_pfn = 0xdd7a1 max_arch_pfn = 0x400000000
+[    0.004141] lit.home.arpa kernel: RAMDISK: [mem 0x7f3e4000-0x7fffffff]
+[    0.004145] lit.home.arpa kernel: ACPI: Early table checksum verification disabled
+[    0.004150] lit.home.arpa kernel: ACPI: RSDP 0x00000000000E5810 000014 (v00 COMPAQ)
+[    0.004153] lit.home.arpa kernel: ACPI: RSDT 0x00000000DD7C5740 000044 (v01 HPQOEM SLIC-BPC 20091022      00000000)
+[    0.004159] lit.home.arpa kernel: ACPI: FACP 0x00000000DD7C57E8 000074 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004163] lit.home.arpa kernel: ACPI BIOS Warning (bug): Optional FADT field Pm2ControlBlock has valid Address but zero Length: 0x0000000000000050/0x0 (20220331/tbfadt-615)
+[    0.004167] lit.home.arpa kernel: ACPI BIOS Warning (bug): Invalid length for FADT/Pm2ControlBlock: 0, using default 8 (20220331/tbfadt-669)
+[    0.004170] lit.home.arpa kernel: ACPI: DSDT 0x00000000DD7C5D27 00A48C (v01 COMPAQ DSDT_PRJ 00000001 MSFT 0100000E)
+[    0.004174] lit.home.arpa kernel: ACPI: FACS 0x00000000DD7C5700 000040
+[    0.004177] lit.home.arpa kernel: ACPI: APIC 0x00000000DD7C585C 000084 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004180] lit.home.arpa kernel: ACPI: ASF! 0x00000000DD7C58E0 000063 (v32 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004183] lit.home.arpa kernel: ACPI: MCFG 0x00000000DD7C5943 00003C (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004187] lit.home.arpa kernel: ACPI: TCPA 0x00000000DD7C597F 000032 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004190] lit.home.arpa kernel: ACPI: SLIC 0x00000000DD7C59B1 000176 (v01 HPQOEM SLIC-BPC 00000001      00000000)
+[    0.004193] lit.home.arpa kernel: ACPI: HPET 0x00000000DD7C5B27 000038 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004196] lit.home.arpa kernel: ACPI: DMAR 0x00000000DD7C5B5F 0001C8 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+[    0.004199] lit.home.arpa kernel: ACPI: Reserving FACP table memory at [mem 0xdd7c57e8-0xdd7c585b]
+[    0.004200] lit.home.arpa kernel: ACPI: Reserving DSDT table memory at [mem 0xdd7c5d27-0xdd7d01b2]
+[    0.004201] lit.home.arpa kernel: ACPI: Reserving FACS table memory at [mem 0xdd7c5700-0xdd7c573f]
+[    0.004202] lit.home.arpa kernel: ACPI: Reserving APIC table memory at [mem 0xdd7c585c-0xdd7c58df]
+[    0.004203] lit.home.arpa kernel: ACPI: Reserving ASF! table memory at [mem 0xdd7c58e0-0xdd7c5942]
+[    0.004204] lit.home.arpa kernel: ACPI: Reserving MCFG table memory at [mem 0xdd7c5943-0xdd7c597e]
+[    0.004205] lit.home.arpa kernel: ACPI: Reserving TCPA table memory at [mem 0xdd7c597f-0xdd7c59b0]
+[    0.004206] lit.home.arpa kernel: ACPI: Reserving SLIC table memory at [mem 0xdd7c59b1-0xdd7c5b26]
+[    0.004207] lit.home.arpa kernel: ACPI: Reserving HPET table memory at [mem 0xdd7c5b27-0xdd7c5b5e]
+[    0.004208] lit.home.arpa kernel: ACPI: Reserving DMAR table memory at [mem 0xdd7c5b5f-0xdd7c5d26]
+[    0.004230] lit.home.arpa kernel: Zone ranges:
+[    0.004231] lit.home.arpa kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.004232] lit.home.arpa kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.004234] lit.home.arpa kernel:   Normal   [mem 0x0000000100000000-0x000000011bffffff]
+[    0.004236] lit.home.arpa kernel: Movable zone start for each node
+[    0.004236] lit.home.arpa kernel: Early memory node ranges
+[    0.004237] lit.home.arpa kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.004238] lit.home.arpa kernel:   node   0: [mem 0x0000000000100000-0x00000000dd7a0fff]
+[    0.004240] lit.home.arpa kernel:   node   0: [mem 0x0000000100000000-0x000000011bffffff]
+[    0.004241] lit.home.arpa kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000011bffffff]
+[    0.004247] lit.home.arpa kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.004289] lit.home.arpa kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.026124] lit.home.arpa kernel: On node 0, zone Normal: 10335 pages in unavailable ranges
+[    0.026484] lit.home.arpa kernel: On node 0, zone Normal: 16384 pages in unavailable ranges
+[    0.026491] lit.home.arpa kernel: Reserving Intel graphics memory at [mem 0xde000000-0xdfffffff]
+[    0.026580] lit.home.arpa kernel: ACPI: PM-Timer IO Port: 0xf808
+[    0.026589] lit.home.arpa kernel: ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.026592] lit.home.arpa kernel: ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.026593] lit.home.arpa kernel: ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.026593] lit.home.arpa kernel: ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.026604] lit.home.arpa kernel: IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.026607] lit.home.arpa kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.026609] lit.home.arpa kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.026614] lit.home.arpa kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.026615] lit.home.arpa kernel: ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.026621] lit.home.arpa kernel: smpboot: Allowing 4 CPUs, 2 hotplug CPUs
+[    0.026632] lit.home.arpa kernel: [mem 0xe0000000-0xf3ffffff] available for PCI devices
+[    0.026635] lit.home.arpa kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370452778343963 ns
+[    0.031018] lit.home.arpa kernel: setup_percpu: NR_CPUS:4 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.031625] lit.home.arpa kernel: percpu: Embedded 45 pages/cpu s144872 r8192 d31256 u524288
+[    0.031630] lit.home.arpa kernel: pcpu-alloc: s144872 r8192 d31256 u524288 alloc=1*2097152
+[    0.031633] lit.home.arpa kernel: pcpu-alloc: [0] 0 1 2 3 
+[    0.031651] lit.home.arpa kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1005634
+[    0.031654] lit.home.arpa kernel: Kernel command line: BOOT_IMAGE=../vmlinuz-linux-hpe8k root=/dev/sda2 rw l1tf=full,force spec_store_bypass_disable=on spectre_v2=on l1d_flush=on apparmor=1 lsm=lockdown,yama,apparmor lockdown=confidentiality init_on_alloc=1 init_on_free=1 page_alloc.shuffle=1 slab_nomerge vsyscall=none slub_debug=FZP randomize_kstack_offset=1 initrd=../initramfs-linux-hpe8k.img
+[    0.031849] lit.home.arpa kernel: Unknown kernel command line parameters "BOOT_IMAGE=../vmlinuz-linux-hpe8k spec_store_bypass_disable=on spectre_v2=on slub_debug=FZP", will be passed to user space.
+[    0.032745] lit.home.arpa kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.033211] lit.home.arpa kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.033266] lit.home.arpa kernel: mem auto-init: stack:all(zero), heap alloc:on, heap free:on
+[    0.033268] lit.home.arpa kernel: mem auto-init: clearing system memory may take some time...
+[    0.033279] lit.home.arpa kernel: software IO TLB: area num 4.
+[    1.518893] lit.home.arpa kernel: Memory: 3912404K/4087036K available (10241K kernel code, 963K rwdata, 2512K rodata, 1088K init, 1108K bss, 174372K reserved, 0K cma-reserved)
+[    1.519203] lit.home.arpa kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    1.519218] lit.home.arpa kernel: Kernel/User page tables isolation: enabled
+[    1.519263] lit.home.arpa kernel: Dynamic Preempt: full
+[    1.519314] lit.home.arpa kernel: rcu: Preemptible hierarchical RCU implementation.
+[    1.519316] lit.home.arpa kernel:         Trampoline variant of Tasks RCU enabled.
+[    1.519316] lit.home.arpa kernel:         Rude variant of Tasks RCU enabled.
+[    1.519317] lit.home.arpa kernel:         Tracing variant of Tasks RCU enabled.
+[    1.519318] lit.home.arpa kernel: rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    1.519329] lit.home.arpa kernel: NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+[    1.519492] lit.home.arpa kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    1.520418] lit.home.arpa kernel: Console: colour VGA+ 80x25
+[    1.520435] lit.home.arpa kernel: printk: console [tty0] enabled
+[    1.520443] lit.home.arpa kernel: ACPI: Core revision 20220331
+[    1.520562] lit.home.arpa kernel: clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+[    1.520577] lit.home.arpa kernel: APIC: Switch to symmetric I/O mode setup
+[    1.520580] lit.home.arpa kernel: DMAR: Host address width 36
+[    1.520582] lit.home.arpa kernel: DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    1.520590] lit.home.arpa kernel: DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap c9008020e30272 ecap 1000
+[    1.520592] lit.home.arpa kernel: DMAR: DRHD base: 0x000000fed91000 flags: 0x0
+[    1.520596] lit.home.arpa kernel: DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap c0000020630272 ecap 1000
+[    1.520598] lit.home.arpa kernel: DMAR: DRHD base: 0x000000fed92000 flags: 0x0
+[    1.520601] lit.home.arpa kernel: DMAR: dmar2: reg_base_addr fed92000 ver 1:0 cap c0000020630272 ecap 1000
+[    1.520602] lit.home.arpa kernel: DMAR: DRHD base: 0x000000fed93000 flags: 0x1
+[    1.520605] lit.home.arpa kernel: DMAR: dmar3: reg_base_addr fed93000 ver 1:0 cap c9008020630272 ecap 1000
+[    1.520607] lit.home.arpa kernel: DMAR: RMRR base: 0x000000ddc00000 end: 0x000000dfffffff
+[    1.520609] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7d8000 end: 0x000000dd7d8fff
+[    1.520610] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7d9000 end: 0x000000dd7d9fff
+[    1.520611] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7da000 end: 0x000000dd7dafff
+[    1.520612] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7db000 end: 0x000000dd7dbfff
+[    1.520613] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7dc000 end: 0x000000dd7dcfff
+[    1.520615] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7dd000 end: 0x000000dd7ddfff
+[    1.520616] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7de000 end: 0x000000dd7defff
+[    1.520617] lit.home.arpa kernel: DMAR: RMRR base: 0x000000dd7df000 end: 0x000000dd7dffff
+[    1.520979] lit.home.arpa kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    1.537242] lit.home.arpa kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2d890bd7db8, max_idle_ns: 440795257576 ns
+[    1.537250] lit.home.arpa kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 6320.27 BogoMIPS (lpj=10530046)
+[    1.537253] lit.home.arpa kernel: pid_max: default: 32768 minimum: 301
+[    1.537319] lit.home.arpa kernel: LSM: Security Framework initializing
+[    1.537332] lit.home.arpa kernel: Yama: becoming mindful.
+[    1.537370] lit.home.arpa kernel: AppArmor: AppArmor initialized
+[    1.537410] lit.home.arpa kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.537413] lit.home.arpa kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.537740] lit.home.arpa kernel: CPU0: Thermal monitoring enabled (TM2)
+[    1.537752] lit.home.arpa kernel: process: using mwait in idle threads
+[    1.537755] lit.home.arpa kernel: Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+[    1.537757] lit.home.arpa kernel: Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32, 1GB 0
+[    1.537761] lit.home.arpa kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    1.537765] lit.home.arpa kernel: Spectre V2 : Mitigation: Retpolines
+[    1.537766] lit.home.arpa kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    1.537767] lit.home.arpa kernel: Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    1.537768] lit.home.arpa kernel: Speculative Store Bypass: Vulnerable
+[    1.537771] lit.home.arpa kernel: MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+[    1.537772] lit.home.arpa kernel: MMIO Stale Data: Unknown: No mitigations
+[    1.546200] lit.home.arpa kernel: Freeing SMP alternatives memory: 32K
+[    1.656265] lit.home.arpa kernel: smpboot: CPU0: Intel(R) Core(TM)2 Duo CPU     E8500  @ 3.16GHz (family: 0x6, model: 0x17, stepping: 0xa)
+[    1.656408] lit.home.arpa kernel: cblist_init_generic: Setting adjustable number of callback queues.
+[    1.656411] lit.home.arpa kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+[    1.656429] lit.home.arpa kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+[    1.656446] lit.home.arpa kernel: cblist_init_generic: Setting shift to 2 and lim to 1.
+[    1.656462] lit.home.arpa kernel: Performance Events: PEBS fmt0+, Core2 events, 4-deep LBR, Intel PMU driver.
+[    1.656474] lit.home.arpa kernel: ... version:                2
+[    1.656475] lit.home.arpa kernel: ... bit width:              40
+[    1.656476] lit.home.arpa kernel: ... generic registers:      2
+[    1.656477] lit.home.arpa kernel: ... value mask:             000000ffffffffff
+[    1.656478] lit.home.arpa kernel: ... max period:             000000007fffffff
+[    1.656479] lit.home.arpa kernel: ... fixed-purpose events:   3
+[    1.656480] lit.home.arpa kernel: ... event mask:             0000000700000003
+[    1.656599] lit.home.arpa kernel: rcu: Hierarchical SRCU implementation.
+[    1.656600] lit.home.arpa kernel: rcu:         Max phase no-delay instances is 1000.
+[    1.656824] lit.home.arpa kernel: NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    1.656887] lit.home.arpa kernel: smp: Bringing up secondary CPUs ...
+[    1.656992] lit.home.arpa kernel: x86: Booting SMP configuration:
+[    1.656993] lit.home.arpa kernel: .... node  #0, CPUs:      #1
+[    1.657301] lit.home.arpa kernel: smp: Brought up 1 node, 2 CPUs
+[    1.657301] lit.home.arpa kernel: smpboot: Max logical packages: 2
+[    1.657301] lit.home.arpa kernel: smpboot: Total of 2 processors activated (12641.55 BogoMIPS)
+[    1.661738] lit.home.arpa kernel: devtmpfs: initialized
+[    1.661738] lit.home.arpa kernel: ACPI: PM: Registering ACPI NVS region [mem 0xdd7a1640-0xdd7a369f] (8288 bytes)
+[    1.661738] lit.home.arpa kernel: reboot: HP Compaq Laptop series board detected. Selecting BIOS-method for reboots.
+[    1.661738] lit.home.arpa kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    1.661738] lit.home.arpa kernel: futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    1.661738] lit.home.arpa kernel: pinctrl core: initialized pinctrl subsystem
+[    1.661738] lit.home.arpa kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    1.661751] lit.home.arpa kernel: audit: initializing netlink subsys (disabled)
+[    1.661783] lit.home.arpa kernel: audit: type=2000 audit(1672774259.139:1): state=initialized audit_enabled=0 res=1
+[    1.661881] lit.home.arpa kernel: thermal_sys: Registered thermal governor 'fair_share'
+[    1.661883] lit.home.arpa kernel: thermal_sys: Registered thermal governor 'bang_bang'
+[    1.661884] lit.home.arpa kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    1.661885] lit.home.arpa kernel: thermal_sys: Registered thermal governor 'user_space'
+[    1.661886] lit.home.arpa kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    1.661899] lit.home.arpa kernel: cpuidle: using governor ladder
+[    1.661904] lit.home.arpa kernel: cpuidle: using governor menu
+[    1.662036] lit.home.arpa kernel: PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf4000000-0xf7ffffff] (base 0xf4000000)
+[    1.662040] lit.home.arpa kernel: PCI: MMCONFIG at [mem 0xf4000000-0xf7ffffff] reserved in E820
+[    1.662046] lit.home.arpa kernel: pmd_set_huge: Cannot satisfy [mem 0xf4000000-0xf4200000] with a huge-page mapping due to MTRR override.
+[    1.662093] lit.home.arpa kernel: PCI: Using configuration type 1 for base access
+[    1.665303] lit.home.arpa kernel: ACPI: Added _OSI(Module Device)
+[    1.665303] lit.home.arpa kernel: ACPI: Added _OSI(Processor Device)
+[    1.665303] lit.home.arpa kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.665303] lit.home.arpa kernel: ACPI: Added _OSI(Processor Aggregator Device)
+[    1.669386] lit.home.arpa kernel: ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    1.670297] lit.home.arpa kernel: ACPI: Dynamic OEM Table Load:
+[    1.670304] lit.home.arpa kernel: ACPI: SSDT 0xFFFF8DA3044FC800 0003AC (v01 COMPAQ CPU_TM2  00000001 MSFT 0100000E)
+[    1.670823] lit.home.arpa kernel: ACPI: Dynamic OEM Table Load:
+[    1.670828] lit.home.arpa kernel: ACPI: SSDT 0xFFFF8DA3044FFC00 0002B0 (v01 COMPAQ CST      00000001 MSFT 0100000E)
+[    1.671635] lit.home.arpa kernel: ACPI: Interpreter enabled
+[    1.671651] lit.home.arpa kernel: ACPI: PM: (supports S0 S3 S5)
+[    1.671653] lit.home.arpa kernel: ACPI: Using IOAPIC for interrupt routing
+[    1.671680] lit.home.arpa kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.671682] lit.home.arpa kernel: PCI: Using E820 reservations for host bridge windows
+[    1.671865] lit.home.arpa kernel: ACPI: Enabled 11 GPEs in block 00 to 3F
+[    1.678374] lit.home.arpa kernel: acpi LNXCPU:00: Invalid PBLK length [7]
+[    1.678439] lit.home.arpa kernel: acpi LNXCPU:01: Invalid PBLK length [7]
+[    1.678766] lit.home.arpa kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.678772] lit.home.arpa kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    1.678778] lit.home.arpa kernel: ACPI BIOS Error (bug): \_SB.PCI0._OSC: Excess arguments - ASL declared 5, ACPI requires 4 (20220331/nsarguments-162)
+[    1.678921] lit.home.arpa kernel: ACPI BIOS Error (bug): Failure creating named object [\_SB.PCI0._OSC.CAPD], AE_ALREADY_EXISTS (20220331/dsfield-184)
+[    1.678998] lit.home.arpa kernel: ACPI Error: AE_ALREADY_EXISTS, CreateBufferField failure (20220331/dswload2-477)
+[    1.679069] lit.home.arpa kernel: ACPI Error: Aborting method \_SB.PCI0._OSC due to previous error (AE_ALREADY_EXISTS) (20220331/psparse-529)
+[    1.679149] lit.home.arpa kernel: acpi PNP0A08:00: _OSC: OS requested [PME PCIeCapability LTR]
+[    1.679151] lit.home.arpa kernel: acpi PNP0A08:00: _OSC: platform willing to grant [PME PCIeCapability LTR]
+[    1.679153] lit.home.arpa kernel: acpi PNP0A08:00: _OSC: platform retains control of PCIe features (AE_ALREADY_EXISTS)
+[    1.679155] lit.home.arpa kernel: acpi PNP0A08:00: [Firmware Info]: MMCONFIG for domain 0000 [bus 00-3f] only partially covers this bridge
+[    1.679563] lit.home.arpa kernel: PCI host bridge to bus 0000:00
+[    1.679565] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [mem 0xf8000000-0xfebfffff window]
+[    1.679568] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.679569] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [io  0x1000-0xffff window]
+[    1.679571] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.679573] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [mem 0xe0000000-0xf3ffffff window]
+[    1.679574] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [mem 0xfed40000-0xfed44fff window]
+[    1.679576] lit.home.arpa kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.679593] lit.home.arpa kernel: pci 0000:00:00.0: [8086:2e10] type 00 class 0x060000
+[    1.679611] lit.home.arpa kernel: pci 0000:00:00.0: DMAR: Disabling IOMMU for graphics on this chipset
+[    1.679613] lit.home.arpa kernel: pci 0000:00:00.0: DMAR: Forcing write-buffer flush capability
+[    1.679666] lit.home.arpa kernel: pci 0000:00:02.0: [8086:2e12] type 00 class 0x030000
+[    1.679674] lit.home.arpa kernel: pci 0000:00:02.0: reg 0x10: [mem 0xf0000000-0xf03fffff 64bit]
+[    1.679679] lit.home.arpa kernel: pci 0000:00:02.0: reg 0x18: [mem 0xe0000000-0xefffffff 64bit pref]
+[    1.679683] lit.home.arpa kernel: pci 0000:00:02.0: reg 0x20: [io  0x1230-0x1237]
+[    1.679695] lit.home.arpa kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.679770] lit.home.arpa kernel: pci 0000:00:02.1: [8086:2e13] type 00 class 0x038000
+[    1.679777] lit.home.arpa kernel: pci 0000:00:02.1: reg 0x10: [mem 0xf0400000-0xf04fffff 64bit]
+[    1.679847] lit.home.arpa kernel: pci 0000:00:03.0: [8086:2e14] type 00 class 0x078000
+[    1.679869] lit.home.arpa kernel: pci 0000:00:03.0: reg 0x10: [mem 0xf052a000-0xf052a00f 64bit]
+[    1.679953] lit.home.arpa kernel: pci 0000:00:03.0: PME# supported from D0 D3hot D3cold
+[    1.680002] lit.home.arpa kernel: pci 0000:00:03.2: [8086:2e16] type 00 class 0x010185
+[    1.680013] lit.home.arpa kernel: pci 0000:00:03.2: reg 0x10: [io  0x1238-0x123f]
+[    1.680019] lit.home.arpa kernel: pci 0000:00:03.2: reg 0x14: [io  0x1260-0x1263]
+[    1.680025] lit.home.arpa kernel: pci 0000:00:03.2: reg 0x18: [io  0x1240-0x1247]
+[    1.680030] lit.home.arpa kernel: pci 0000:00:03.2: reg 0x1c: [io  0x1264-0x1267]
+[    1.680036] lit.home.arpa kernel: pci 0000:00:03.2: reg 0x20: [io  0x1220-0x122f]
+[    1.680109] lit.home.arpa kernel: pci 0000:00:03.3: [8086:2e17] type 00 class 0x070002
+[    1.680117] lit.home.arpa kernel: pci 0000:00:03.3: reg 0x10: [io  0x1248-0x124f]
+[    1.680122] lit.home.arpa kernel: pci 0000:00:03.3: reg 0x14: [mem 0xf0524000-0xf0524fff]
+[    1.680248] lit.home.arpa kernel: pci 0000:00:19.0: [8086:10de] type 00 class 0x020000
+[    1.680261] lit.home.arpa kernel: pci 0000:00:19.0: reg 0x10: [mem 0xf0500000-0xf051ffff]
+[    1.680267] lit.home.arpa kernel: pci 0000:00:19.0: reg 0x14: [mem 0xf0525000-0xf0525fff]
+[    1.680274] lit.home.arpa kernel: pci 0000:00:19.0: reg 0x18: [io  0x1100-0x111f]
+[    1.680321] lit.home.arpa kernel: pci 0000:00:19.0: PME# supported from D0 D3hot D3cold
+[    1.680403] lit.home.arpa kernel: pci 0000:00:1a.0: [8086:3a67] type 00 class 0x0c0300
+[    1.680438] lit.home.arpa kernel: pci 0000:00:1a.0: reg 0x20: [io  0x1120-0x113f]
+[    1.680548] lit.home.arpa kernel: pci 0000:00:1a.1: [8086:3a68] type 00 class 0x0c0300
+[    1.680596] lit.home.arpa kernel: pci 0000:00:1a.1: reg 0x20: [io  0x1140-0x115f]
+[    1.680703] lit.home.arpa kernel: pci 0000:00:1a.2: [8086:3a69] type 00 class 0x0c0300
+[    1.680738] lit.home.arpa kernel: pci 0000:00:1a.2: reg 0x20: [io  0x1160-0x117f]
+[    1.680850] lit.home.arpa kernel: pci 0000:00:1a.7: [8086:3a6c] type 00 class 0x0c0320
+[    1.680865] lit.home.arpa kernel: pci 0000:00:1a.7: reg 0x10: [mem 0xf0527000-0xf05273ff]
+[    1.680935] lit.home.arpa kernel: pci 0000:00:1a.7: PME# supported from D0 D3hot D3cold
+[    1.681028] lit.home.arpa kernel: pci 0000:00:1b.0: [8086:3a6e] type 00 class 0x040300
+[    1.681043] lit.home.arpa kernel: pci 0000:00:1b.0: reg 0x10: [mem 0xf0520000-0xf0523fff 64bit]
+[    1.681106] lit.home.arpa kernel: pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    1.681175] lit.home.arpa kernel: pci 0000:00:1d.0: [8086:3a64] type 00 class 0x0c0300
+[    1.681209] lit.home.arpa kernel: pci 0000:00:1d.0: reg 0x20: [io  0x1180-0x119f]
+[    1.681322] lit.home.arpa kernel: pci 0000:00:1d.1: [8086:3a65] type 00 class 0x0c0300
+[    1.681356] lit.home.arpa kernel: pci 0000:00:1d.1: reg 0x20: [io  0x11a0-0x11bf]
+[    1.681462] lit.home.arpa kernel: pci 0000:00:1d.2: [8086:3a66] type 00 class 0x0c0300
+[    1.681497] lit.home.arpa kernel: pci 0000:00:1d.2: reg 0x20: [io  0x11c0-0x11df]
+[    1.681612] lit.home.arpa kernel: pci 0000:00:1d.7: [8086:3a6a] type 00 class 0x0c0320
+[    1.681627] lit.home.arpa kernel: pci 0000:00:1d.7: reg 0x10: [mem 0xf0528000-0xf05283ff]
+[    1.681696] lit.home.arpa kernel: pci 0000:00:1d.7: PME# supported from D0 D3hot D3cold
+[    1.681786] lit.home.arpa kernel: pci 0000:00:1e.0: [8086:244e] type 01 class 0x060401
+[    1.681909] lit.home.arpa kernel: pci 0000:00:1f.0: [8086:3a14] type 00 class 0x060100
+[    1.682091] lit.home.arpa kernel: pci 0000:00:1f.2: [8086:3a02] type 00 class 0x010601
+[    1.682102] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x10: [io  0x1250-0x1257]
+[    1.682109] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x14: [io  0x1268-0x126b]
+[    1.682115] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x18: [io  0x1258-0x125f]
+[    1.682121] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x1c: [io  0x126c-0x126f]
+[    1.682127] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x20: [io  0x11e0-0x11ff]
+[    1.682133] lit.home.arpa kernel: pci 0000:00:1f.2: reg 0x24: [mem 0xf0526000-0xf05267ff]
+[    1.682166] lit.home.arpa kernel: pci 0000:00:1f.2: PME# supported from D3hot
+[    1.682254] lit.home.arpa kernel: pci_bus 0000:10: extended config space not accessible
+[    1.682296] lit.home.arpa kernel: pci 0000:00:1e.0: PCI bridge to [bus 10] (subtractive decode)
+[    1.682304] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [mem 0xf8000000-0xfebfffff window] (subtractive decode)
+[    1.682306] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+[    1.682308] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [io  0x1000-0xffff window] (subtractive decode)
+[    1.682309] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+[    1.682311] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [mem 0xe0000000-0xf3ffffff window] (subtractive decode)
+[    1.682313] lit.home.arpa kernel: pci 0000:00:1e.0:   bridge window [mem 0xfed40000-0xfed44fff window] (subtractive decode)
+[    1.682319] lit.home.arpa kernel: pci_bus 0000:00: on NUMA node 0
+[    1.682700] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 5
+[    1.682781] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 11
+[    1.682860] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 10
+[    1.682939] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 5
+[    1.683018] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKE configured for IRQ 10
+[    1.683102] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKF configured for IRQ 11
+[    1.683181] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKG configured for IRQ 5
+[    1.683260] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKH configured for IRQ 0
+[    1.683262] lit.home.arpa kernel: ACPI: PCI: Interrupt link LNKH disabled
+[    1.683526] lit.home.arpa kernel: iommu: Default domain type: Translated 
+[    1.683528] lit.home.arpa kernel: iommu: DMA domain TLB invalidation policy: lazy mode 
+[    1.683677] lit.home.arpa kernel: SCSI subsystem initialized
+[    1.683707] lit.home.arpa kernel: libata version 3.00 loaded.
+[    1.683726] lit.home.arpa kernel: pps_core: LinuxPPS API ver. 1 registered
+[    1.683727] lit.home.arpa kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.683730] lit.home.arpa kernel: PTP clock support registered
+[    1.683868] lit.home.arpa kernel: PCI: Using ACPI for IRQ routing
+[    1.685057] lit.home.arpa kernel: PCI: pci_cache_line_size set to 64 bytes
+[    1.685094] lit.home.arpa kernel: e820: reserve RAM buffer [mem 0x0009f800-0x0009ffff]
+[    1.685096] lit.home.arpa kernel: e820: reserve RAM buffer [mem 0xdd7a1640-0xdfffffff]
+[    1.685110] lit.home.arpa kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    1.685110] lit.home.arpa kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+[    1.685110] lit.home.arpa kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.685110] lit.home.arpa kernel: vgaarb: loaded
+[    1.685110] lit.home.arpa kernel: hpet: 8 channels of 4 reserved for per-cpu timers
+[    1.685110] lit.home.arpa kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 24, 25, 26, 27, 0
+[    1.685110] lit.home.arpa kernel: hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+[    1.687276] lit.home.arpa kernel: clocksource: Switched to clocksource tsc-early
+[    1.687473] lit.home.arpa kernel: AppArmor: AppArmor Filesystem Enabled
+[    1.687485] lit.home.arpa kernel: pnp: PnP ACPI init
+[    1.688004] lit.home.arpa kernel: system 00:05: [io  0x04d0-0x04d1] has been reserved
+[    1.688055] lit.home.arpa kernel: system 00:06: [io  0x0400-0x041f] has been reserved
+[    1.688058] lit.home.arpa kernel: system 00:06: [io  0x0420-0x043f] has been reserved
+[    1.688059] lit.home.arpa kernel: system 00:06: [io  0x0440-0x045f] has been reserved
+[    1.688061] lit.home.arpa kernel: system 00:06: [io  0x0460-0x047f] has been reserved
+[    1.688063] lit.home.arpa kernel: system 00:06: [io  0x0800-0x087f] has been reserved
+[    1.688065] lit.home.arpa kernel: system 00:06: [io  0x0880-0x08ff] has been reserved
+[    1.688067] lit.home.arpa kernel: system 00:06: [io  0xf800-0xf81f] has been reserved
+[    1.688068] lit.home.arpa kernel: system 00:06: [io  0xf820-0xf83f] has been reserved
+[    1.688070] lit.home.arpa kernel: system 00:06: [io  0xf840-0xf85f] has been reserved
+[    1.688072] lit.home.arpa kernel: system 00:06: [io  0xf860-0xf87f] has been reserved
+[    1.688074] lit.home.arpa kernel: system 00:06: [io  0xfa00-0xfa3f] has been reserved
+[    1.688076] lit.home.arpa kernel: system 00:06: [io  0xfc00-0xfc7f] has been reserved
+[    1.688078] lit.home.arpa kernel: system 00:06: [io  0xfc80-0xfcff] has been reserved
+[    1.688079] lit.home.arpa kernel: system 00:06: [io  0xfe00-0xfe7f] has been reserved
+[    1.688081] lit.home.arpa kernel: system 00:06: [io  0xfe80-0xfeff] has been reserved
+[    1.688473] lit.home.arpa kernel: pnp 00:07: disabling [mem 0x000cc600-0x000e3fff] because it overlaps 0000:00:02.0 BAR 6 [mem 0x000c0000-0x000dffff]
+[    1.688501] lit.home.arpa kernel: system 00:07: [mem 0x00000000-0x0009ffff] could not be reserved
+[    1.688503] lit.home.arpa kernel: system 00:07: [mem 0x00100000-0xdfffffff] could not be reserved
+[    1.688506] lit.home.arpa kernel: system 00:07: [mem 0x000e4000-0x000fffff] could not be reserved
+[    1.688508] lit.home.arpa kernel: system 00:07: [mem 0xfec01000-0xfecfffff] has been reserved
+[    1.688510] lit.home.arpa kernel: system 00:07: [mem 0xfed00400-0xfed3ffff] has been reserved
+[    1.688512] lit.home.arpa kernel: system 00:07: [mem 0xfed45000-0xffffffff] could not be reserved
+[    1.688514] lit.home.arpa kernel: system 00:07: [mem 0xf4000000-0xf7ffffff] has been reserved
+[    1.688529] lit.home.arpa kernel: pnp: PnP ACPI: found 8 devices
+[    1.694646] lit.home.arpa kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.694722] lit.home.arpa kernel: NET: Registered PF_INET protocol family
+[    1.694756] lit.home.arpa kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.695615] lit.home.arpa kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    1.695627] lit.home.arpa kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    1.695640] lit.home.arpa kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    1.695708] lit.home.arpa kernel: TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    1.695976] lit.home.arpa kernel: TCP: Hash tables configured (established 32768 bind 32768)
+[    1.695995] lit.home.arpa kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    1.696014] lit.home.arpa kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    1.696072] lit.home.arpa kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.696089] lit.home.arpa kernel: pci 0000:00:1e.0: PCI bridge to [bus 10]
+[    1.696098] lit.home.arpa kernel: pci_bus 0000:00: resource 4 [mem 0xf8000000-0xfebfffff window]
+[    1.696100] lit.home.arpa kernel: pci_bus 0000:00: resource 5 [io  0x0000-0x0cf7 window]
+[    1.696102] lit.home.arpa kernel: pci_bus 0000:00: resource 6 [io  0x1000-0xffff window]
+[    1.696104] lit.home.arpa kernel: pci_bus 0000:00: resource 7 [mem 0x000a0000-0x000bffff window]
+[    1.696105] lit.home.arpa kernel: pci_bus 0000:00: resource 8 [mem 0xe0000000-0xf3ffffff window]
+[    1.696107] lit.home.arpa kernel: pci_bus 0000:00: resource 9 [mem 0xfed40000-0xfed44fff window]
+[    1.696109] lit.home.arpa kernel: pci_bus 0000:10: resource 4 [mem 0xf8000000-0xfebfffff window]
+[    1.696111] lit.home.arpa kernel: pci_bus 0000:10: resource 5 [io  0x0000-0x0cf7 window]
+[    1.696112] lit.home.arpa kernel: pci_bus 0000:10: resource 6 [io  0x1000-0xffff window]
+[    1.696114] lit.home.arpa kernel: pci_bus 0000:10: resource 7 [mem 0x000a0000-0x000bffff window]
+[    1.696115] lit.home.arpa kernel: pci_bus 0000:10: resource 8 [mem 0xe0000000-0xf3ffffff window]
+[    1.696117] lit.home.arpa kernel: pci_bus 0000:10: resource 9 [mem 0xfed40000-0xfed44fff window]
+[    1.698668] lit.home.arpa kernel: PCI: CLS 64 bytes, default 64
+[    1.698714] lit.home.arpa kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.698715] lit.home.arpa kernel: software IO TLB: mapped [mem 0x00000000d97a1000-0x00000000dd7a1000] (64MB)
+[    1.698756] lit.home.arpa kernel: Unpacking initramfs...
+[    1.704361] lit.home.arpa kernel: Initialise system trusted keyrings
+[    1.704386] lit.home.arpa kernel: Key type blacklist registered
+[    1.704417] lit.home.arpa kernel: workingset: timestamp_bits=46 max_order=20 bucket_order=0
+[    1.705882] lit.home.arpa kernel: zbud: loaded
+[    1.715296] lit.home.arpa kernel: Key type asymmetric registered
+[    1.715303] lit.home.arpa kernel: Asymmetric key parser 'x509' registered
+[    1.715336] lit.home.arpa kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.715409] lit.home.arpa kernel: io scheduler mq-deadline registered
+[    1.715411] lit.home.arpa kernel: io scheduler kyber registered
+[    1.715453] lit.home.arpa kernel: io scheduler bfq registered
+[    1.715727] lit.home.arpa kernel: Monitor-Mwait will be used to enter C-1 state
+[    1.715733] lit.home.arpa kernel: Monitor-Mwait will be used to enter C-2 state
+[    1.715736] lit.home.arpa kernel: ACPI: \_PR_.CPU0: Found 2 idle states
+[    1.716099] lit.home.arpa kernel: Linux agpgart interface v0.103
+[    1.716137] lit.home.arpa kernel: ACPI: bus type drm_connector registered
+[    1.716330] lit.home.arpa kernel: ahci 0000:00:1f.2: version 3.0
+[    1.716584] lit.home.arpa kernel: ahci 0000:00:1f.2: AHCI 0001.0200 32 slots 6 ports 3 Gbps 0x3 impl SATA mode
+[    1.716589] lit.home.arpa kernel: ahci 0000:00:1f.2: flags: 64bit ncq sntf pm led clo pio slum part 
+[    1.717092] lit.home.arpa kernel: scsi host0: ahci
+[    1.717211] lit.home.arpa kernel: scsi host1: ahci
+[    1.717339] lit.home.arpa kernel: scsi host2: ahci
+[    1.717429] lit.home.arpa kernel: scsi host3: ahci
+[    1.717520] lit.home.arpa kernel: scsi host4: ahci
+[    1.717623] lit.home.arpa kernel: scsi host5: ahci
+[    1.717667] lit.home.arpa kernel: ata1: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526100 irq 28
+[    1.717669] lit.home.arpa kernel: ata2: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526180 irq 28
+[    1.717671] lit.home.arpa kernel: ata3: DUMMY
+[    1.717672] lit.home.arpa kernel: ata4: DUMMY
+[    1.717672] lit.home.arpa kernel: ata5: DUMMY
+[    1.717673] lit.home.arpa kernel: ata6: DUMMY
+[    1.717710] lit.home.arpa kernel: rtc_cmos 00:00: RTC can wake from S4
+[    1.717949] lit.home.arpa kernel: rtc_cmos 00:00: registered as rtc0
+[    1.717975] lit.home.arpa kernel: rtc_cmos 00:00: setting system clock to 2023-01-03T19:31:00 UTC (1672774260)
+[    1.717992] lit.home.arpa kernel: rtc_cmos 00:00: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+[    1.718049] lit.home.arpa kernel: intel_pstate: CPU model not supported
+[    1.718079] lit.home.arpa kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    1.718394] lit.home.arpa kernel: hid: raw HID events driver (C) Jiri Kosina
+[    1.718607] lit.home.arpa kernel: NET: Registered PF_INET6 protocol family
+[    1.718928] lit.home.arpa kernel: Segment Routing with IPv6
+[    1.718938] lit.home.arpa kernel: In-situ OAM (IOAM) with IPv6
+[    1.718956] lit.home.arpa kernel: NET: Registered PF_PACKET protocol family
+[    1.719160] lit.home.arpa kernel: microcode: sig=0x1067a, pf=0x1, revision=0xa07
+[    1.719168] lit.home.arpa kernel: microcode: Microcode Update Driver: v2.2.
+[    1.719171] lit.home.arpa kernel: IPI shorthand broadcast: enabled
+[    1.719195] lit.home.arpa kernel: sched_clock: Marking stable (1716187974, 1062405)->(1719707344, -2456965)
+[    1.719262] lit.home.arpa kernel: registered taskstats version 1
+[    1.719268] lit.home.arpa kernel: Loading compiled-in X.509 certificates
+[    1.724073] lit.home.arpa kernel: Loaded X.509 cert 'Build time autogenerated kernel key: c643c1ed3934f67963ec9e2919605d2d5366a0da'
+[    1.724320] lit.home.arpa kernel: zswap: loaded using pool lz4/z3fold
+[    1.724445] lit.home.arpa kernel: Key type .fscrypt registered
+[    1.724447] lit.home.arpa kernel: Key type fscrypt-provisioning registered
+[    1.724488] lit.home.arpa kernel: AppArmor: AppArmor sha1 policy hashing enabled
+[    1.785204] lit.home.arpa kernel: Freeing initrd memory: 12400K
+[    2.037262] lit.home.arpa kernel: ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    2.037280] lit.home.arpa kernel: ata2: SATA link down (SStatus 4 SControl 300)
+[    2.037792] lit.home.arpa kernel: ata1.00: ACPI cmd ef/03:0c:00:00:00:a0(SET FEATURES) filtered out
+[    2.037798] lit.home.arpa kernel: ata1.00: ACPI cmd ef/03:45:00:00:00:a0(SET FEATURES) filtered out
+[    2.041524] lit.home.arpa kernel: ata1.00: ACPI cmd b1/c1:00:00:00:00:a0(DEVICE CONFIGURATION OVERLAY) filtered out
+[    2.041529] lit.home.arpa kernel: ata1.00: ACPI cmd f5/00:00:00:00:00:a0(SECURITY FREEZE LOCK) filtered out
+[    2.041532] lit.home.arpa kernel: ata1.00: ACPI cmd ef/10:03:00:00:00:a0(SET FEATURES) filtered out
+[    2.041944] lit.home.arpa kernel: ata1.00: ATA-9: SanDisk SSD PLUS 120GB, UE5100RL, max UDMA/133
+[    2.041948] lit.home.arpa kernel: ata1.00: 234455040 sectors, multi 1: LBA48 NCQ (depth 32)
+[    2.042873] lit.home.arpa kernel: ata1.00: Features: Dev-Sleep
+[    2.045674] lit.home.arpa kernel: ata1.00: ACPI cmd ef/03:0c:00:00:00:a0(SET FEATURES) filtered out
+[    2.045684] lit.home.arpa kernel: ata1.00: ACPI cmd ef/03:45:00:00:00:a0(SET FEATURES) filtered out
+[    2.048138] lit.home.arpa kernel: ata1.00: ACPI cmd b1/c1:00:00:00:00:a0(DEVICE CONFIGURATION OVERLAY) filtered out
+[    2.048142] lit.home.arpa kernel: ata1.00: ACPI cmd f5/00:00:00:00:00:a0(SECURITY FREEZE LOCK) filtered out
+[    2.048146] lit.home.arpa kernel: ata1.00: ACPI cmd ef/10:03:00:00:00:a0(SET FEATURES) filtered out
+[    2.048746] lit.home.arpa kernel: ata1.00: configured for UDMA/133
+[    2.048880] lit.home.arpa kernel: scsi 0:0:0:0: Direct-Access     ATA      SanDisk SSD PLUS 00RL PQ: 0 ANSI: 5
+[    2.049588] lit.home.arpa kernel: Freeing unused kernel image (initmem) memory: 1088K
+[    2.063920] lit.home.arpa kernel: Write protecting the kernel read-only data: 16384k
+[    2.064836] lit.home.arpa kernel: Freeing unused kernel image (text/rodata gap) memory: 2044K
+[    2.065402] lit.home.arpa kernel: Freeing unused kernel image (rodata/data gap) memory: 1584K
+[    2.067528] lit.home.arpa kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.067534] lit.home.arpa kernel: rodata_test: all tests were successful
+[    2.067535] lit.home.arpa kernel: x86/mm: Checking user space page tables
+[    2.067678] lit.home.arpa kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.067685] lit.home.arpa kernel: Run /init as init process
+[    2.067686] lit.home.arpa kernel:   with arguments:
+[    2.067686] lit.home.arpa kernel:     /init
+[    2.067687] lit.home.arpa kernel:   with environment:
+[    2.067688] lit.home.arpa kernel:     HOME=/
+[    2.067689] lit.home.arpa kernel:     TERM=linux
+[    2.067689] lit.home.arpa kernel:     BOOT_IMAGE=../vmlinuz-linux-hpe8k
+[    2.067690] lit.home.arpa kernel:     spec_store_bypass_disable=on
+[    2.067691] lit.home.arpa kernel:     spectre_v2=on
+[    2.067692] lit.home.arpa kernel:     slub_debug=FZP
+[    2.186300] lit.home.arpa kernel: i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f0e:PS2M] at 0x60,0x64 irq 1,12
+[    2.189096] lit.home.arpa kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.190440] lit.home.arpa kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.229003] lit.home.arpa kernel: ACPI: bus type USB registered
+[    2.229029] lit.home.arpa kernel: usbcore: registered new interface driver usbfs
+[    2.229041] lit.home.arpa kernel: usbcore: registered new interface driver hub
+[    2.229057] lit.home.arpa kernel: usbcore: registered new device driver usb
+[    2.242566] lit.home.arpa kernel: ehci-pci 0000:00:1a.7: EHCI Host Controller
+[    2.242573] lit.home.arpa kernel: ehci-pci 0000:00:1a.7: new USB bus registered, assigned bus number 1
+[    2.242585] lit.home.arpa kernel: ehci-pci 0000:00:1a.7: debug port 1
+[    2.263938] lit.home.arpa kernel: ehci-pci 0000:00:1a.7: irq 22, io mem 0xf0527000
+[    2.266736] lit.home.arpa kernel: sd 0:0:0:0: [sda] 234455040 512-byte logical blocks: (120 GB/112 GiB)
+[    2.266748] lit.home.arpa kernel: sd 0:0:0:0: [sda] Write Protect is off
+[    2.266750] lit.home.arpa kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    2.266765] lit.home.arpa kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.266787] lit.home.arpa kernel: sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    2.267983] lit.home.arpa kernel:  sda: sda1 sda2 sda3
+[    2.268090] lit.home.arpa kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.280589] lit.home.arpa kernel: ehci-pci 0000:00:1a.7: USB 2.0 started, EHCI 1.00
+[    2.280628] lit.home.arpa kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    2.280631] lit.home.arpa kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.280633] lit.home.arpa kernel: usb usb1: Product: EHCI Host Controller
+[    2.280634] lit.home.arpa kernel: usb usb1: Manufacturer: Linux 6.1.1-arch1-4-hpe8k ehci_hcd
+[    2.280636] lit.home.arpa kernel: usb usb1: SerialNumber: 0000:00:1a.7
+[    2.280761] lit.home.arpa kernel: hub 1-0:1.0: USB hub found
+[    2.280769] lit.home.arpa kernel: hub 1-0:1.0: 6 ports detected
+[    2.281637] lit.home.arpa kernel: ehci-pci 0000:00:1d.7: EHCI Host Controller
+[    2.281643] lit.home.arpa kernel: ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 2
+[    2.281652] lit.home.arpa kernel: ehci-pci 0000:00:1d.7: debug port 1
+[    2.285563] lit.home.arpa kernel: ehci-pci 0000:00:1d.7: irq 20, io mem 0xf0528000
+[    2.297256] lit.home.arpa kernel: ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+[    2.297293] lit.home.arpa kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    2.297296] lit.home.arpa kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.297298] lit.home.arpa kernel: usb usb2: Product: EHCI Host Controller
+[    2.297299] lit.home.arpa kernel: usb usb2: Manufacturer: Linux 6.1.1-arch1-4-hpe8k ehci_hcd
+[    2.297300] lit.home.arpa kernel: usb usb2: SerialNumber: 0000:00:1d.7
+[    2.297423] lit.home.arpa kernel: hub 2-0:1.0: USB hub found
+[    2.297430] lit.home.arpa kernel: hub 2-0:1.0: 6 ports detected
+[    2.303713] lit.home.arpa kernel: uhci_hcd 0000:00:1a.0: UHCI Host Controller
+[    2.303718] lit.home.arpa kernel: uhci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 3
+[    2.303739] lit.home.arpa kernel: uhci_hcd 0000:00:1a.0: irq 20, io port 0x00001120
+[    2.312326] lit.home.arpa kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.312330] lit.home.arpa kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.312331] lit.home.arpa kernel: usb usb3: Product: UHCI Host Controller
+[    2.312333] lit.home.arpa kernel: usb usb3: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.312334] lit.home.arpa kernel: usb usb3: SerialNumber: 0000:00:1a.0
+[    2.312429] lit.home.arpa kernel: hub 3-0:1.0: USB hub found
+[    2.312435] lit.home.arpa kernel: hub 3-0:1.0: 2 ports detected
+[    2.312722] lit.home.arpa kernel: uhci_hcd 0000:00:1a.1: UHCI Host Controller
+[    2.312729] lit.home.arpa kernel: uhci_hcd 0000:00:1a.1: new USB bus registered, assigned bus number 4
+[    2.312754] lit.home.arpa kernel: uhci_hcd 0000:00:1a.1: irq 21, io port 0x00001140
+[    2.312793] lit.home.arpa kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.312796] lit.home.arpa kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.312798] lit.home.arpa kernel: usb usb4: Product: UHCI Host Controller
+[    2.312799] lit.home.arpa kernel: usb usb4: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.312800] lit.home.arpa kernel: usb usb4: SerialNumber: 0000:00:1a.1
+[    2.313113] lit.home.arpa kernel: hub 4-0:1.0: USB hub found
+[    2.313120] lit.home.arpa kernel: hub 4-0:1.0: 2 ports detected
+[    2.313392] lit.home.arpa kernel: uhci_hcd 0000:00:1a.2: UHCI Host Controller
+[    2.313397] lit.home.arpa kernel: uhci_hcd 0000:00:1a.2: new USB bus registered, assigned bus number 5
+[    2.313416] lit.home.arpa kernel: uhci_hcd 0000:00:1a.2: irq 22, io port 0x00001160
+[    2.313655] lit.home.arpa kernel: usb usb5: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.313658] lit.home.arpa kernel: usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.313660] lit.home.arpa kernel: usb usb5: Product: UHCI Host Controller
+[    2.313661] lit.home.arpa kernel: usb usb5: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.313663] lit.home.arpa kernel: usb usb5: SerialNumber: 0000:00:1a.2
+[    2.313804] lit.home.arpa kernel: hub 5-0:1.0: USB hub found
+[    2.313849] lit.home.arpa kernel: hub 5-0:1.0: 2 ports detected
+[    2.314280] lit.home.arpa kernel: uhci_hcd 0000:00:1d.0: UHCI Host Controller
+[    2.314286] lit.home.arpa kernel: uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 6
+[    2.314305] lit.home.arpa kernel: uhci_hcd 0000:00:1d.0: irq 20, io port 0x00001180
+[    2.314438] lit.home.arpa kernel: usb usb6: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.314441] lit.home.arpa kernel: usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.314443] lit.home.arpa kernel: usb usb6: Product: UHCI Host Controller
+[    2.314445] lit.home.arpa kernel: usb usb6: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.314446] lit.home.arpa kernel: usb usb6: SerialNumber: 0000:00:1d.0
+[    2.314619] lit.home.arpa kernel: hub 6-0:1.0: USB hub found
+[    2.314699] lit.home.arpa kernel: hub 6-0:1.0: 2 ports detected
+[    2.315166] lit.home.arpa kernel: uhci_hcd 0000:00:1d.1: UHCI Host Controller
+[    2.315171] lit.home.arpa kernel: uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 7
+[    2.315190] lit.home.arpa kernel: uhci_hcd 0000:00:1d.1: irq 21, io port 0x000011a0
+[    2.315360] lit.home.arpa kernel: usb usb7: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.315363] lit.home.arpa kernel: usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.315365] lit.home.arpa kernel: usb usb7: Product: UHCI Host Controller
+[    2.315366] lit.home.arpa kernel: usb usb7: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.315367] lit.home.arpa kernel: usb usb7: SerialNumber: 0000:00:1d.1
+[    2.315506] lit.home.arpa kernel: hub 7-0:1.0: USB hub found
+[    2.315550] lit.home.arpa kernel: hub 7-0:1.0: 2 ports detected
+[    2.315937] lit.home.arpa kernel: uhci_hcd 0000:00:1d.2: UHCI Host Controller
+[    2.315942] lit.home.arpa kernel: uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 8
+[    2.315962] lit.home.arpa kernel: uhci_hcd 0000:00:1d.2: irq 22, io port 0x000011c0
+[    2.316094] lit.home.arpa kernel: usb usb8: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.01
+[    2.316097] lit.home.arpa kernel: usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.316099] lit.home.arpa kernel: usb usb8: Product: UHCI Host Controller
+[    2.316100] lit.home.arpa kernel: usb usb8: Manufacturer: Linux 6.1.1-arch1-4-hpe8k uhci_hcd
+[    2.316102] lit.home.arpa kernel: usb usb8: SerialNumber: 0000:00:1d.2
+[    2.332838] lit.home.arpa kernel: hub 8-0:1.0: USB hub found
+[    2.332852] lit.home.arpa kernel: hub 8-0:1.0: 2 ports detected
+[    2.376858] lit.home.arpa kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[    2.405272] lit.home.arpa kernel: pci 0000:00:00.0: Intel Q45/Q43 Chipset
+[    2.405290] lit.home.arpa kernel: pci 0000:00:00.0: detected gtt size: 2097152K total, 262144K mappable
+[    2.406023] lit.home.arpa kernel: pci 0000:00:00.0: detected 32768K stolen memory
+[    2.406052] lit.home.arpa kernel: i915 0000:00:02.0: vgaarb: deactivate vga console
+[    2.406495] lit.home.arpa kernel: Console: switching to colour dummy device 80x25
+[    2.406715] lit.home.arpa kernel: [drm] ACPI BIOS requests an excessive sleep of 1281137284 ms, using 1500 ms instead
+[    2.407007] lit.home.arpa kernel: i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    2.422500] lit.home.arpa kernel: [drm] Initialized i915 1.6.0 20201103 for 0000:00:02.0 on minor 0
+[    2.422692] lit.home.arpa kernel: ACPI: video: Video Device [GFX0] (multi-head: no  rom: yes  post: no)
+[    2.422731] lit.home.arpa kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input2
+[    2.531603] lit.home.arpa kernel: fbcon: i915drmfb (fb0) is primary device
+[    2.564584] lit.home.arpa kernel: Console: switching to colour frame buffer device 200x56
+[    2.582631] lit.home.arpa kernel: i915 0000:00:02.0: [drm] fb0: i915drmfb frame buffer device
+[    2.646336] lit.home.arpa kernel: EXT4-fs (sda2): mounted filesystem with ordered data mode. Quota mode: disabled.
+[    2.680742] lit.home.arpa kernel: usb 4-2: new low-speed USB device number 2 using uhci_hcd
+[    2.720592] lit.home.arpa kernel: tsc: Refined TSC clocksource calibration: 3158.718 MHz
+[    2.720604] lit.home.arpa kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2d87f46ff25, max_idle_ns: 440795202126 ns
+[    2.720626] lit.home.arpa kernel: clocksource: Switched to clocksource tsc
+[    2.869730] lit.home.arpa kernel: usb 4-2: New USB device found, idVendor=0458, idProduct=0003, bcdDevice= 0.00
+[    2.869736] lit.home.arpa kernel: usb 4-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.869739] lit.home.arpa kernel: usb 4-2: Product: Genius USB Wheel Mouse
+[    2.869741] lit.home.arpa kernel: usb 4-2: Manufacturer: KYE
+[    2.874599] lit.home.arpa systemd[1]: Failed to find module 'autofs4'
+[    2.889349] lit.home.arpa systemd[1]: systemd 252.4-2-arch running in system mode (+PAM +AUDIT -SELINUX -APPARMOR -IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +XKBCOMMON +UTMP -SYSVINIT default-hierarchy=unified)
+[    2.889357] lit.home.arpa systemd[1]: Detected architecture x86-64.
+[    2.894191] lit.home.arpa systemd[1]: Hostname set to <lit.home.arpa>.
+[    2.976054] lit.home.arpa systemd[1]: bpf-lsm: BPF LSM hook not enabled in the kernel, BPF LSM not supported
+[    3.235543] lit.home.arpa systemd[1]: Queued start job for default target Graphical Interface.
+[    3.251223] lit.home.arpa systemd[1]: Created slice Slice /system/getty.
+[    3.251696] lit.home.arpa systemd[1]: Created slice Slice /system/modprobe.
+[    3.252097] lit.home.arpa systemd[1]: Created slice Cryptsetup Units Slice.
+[    3.252506] lit.home.arpa systemd[1]: Created slice Slice /system/systemd-fsck.
+[    3.252858] lit.home.arpa systemd[1]: Created slice User and Session Slice.
+[    3.253018] lit.home.arpa systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    3.253164] lit.home.arpa systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    3.253282] lit.home.arpa systemd[1]: Starting of Arbitrary Executable File Formats File System Automount Point unsupported.
+[    3.253421] lit.home.arpa systemd[1]: Reached target Local Integrity Protected Volumes.
+[    3.253524] lit.home.arpa systemd[1]: Reached target Path Units.
+[    3.253616] lit.home.arpa systemd[1]: Reached target Remote File Systems.
+[    3.253705] lit.home.arpa systemd[1]: Reached target Slice Units.
+[    3.253812] lit.home.arpa systemd[1]: Reached target Local Verity Protected Volumes.
+[    3.253975] lit.home.arpa systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    3.254455] lit.home.arpa systemd[1]: Listening on LVM2 poll daemon socket.
+[    3.256082] lit.home.arpa systemd[1]: Listening on Process Core Dump Socket.
+[    3.256338] lit.home.arpa systemd[1]: Listening on Journal Audit Socket.
+[    3.256556] lit.home.arpa systemd[1]: Listening on Journal Socket (/dev/log).
+[    3.256779] lit.home.arpa systemd[1]: Listening on Journal Socket.
+[    3.257018] lit.home.arpa systemd[1]: Listening on Network Service Netlink Socket.
+[    3.257494] lit.home.arpa systemd[1]: Listening on udev Control Socket.
+[    3.257719] lit.home.arpa systemd[1]: Listening on udev Kernel Socket.
+[    3.258863] lit.home.arpa systemd[1]: Huge Pages File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/mm/hugepages).
+[    3.259777] lit.home.arpa systemd[1]: Mounting POSIX Message Queue File System...
+[    3.261737] lit.home.arpa systemd[1]: Mounting Kernel Debug File System...
+[    3.262918] lit.home.arpa systemd[1]: Kernel Trace File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/tracing).
+[    3.263857] lit.home.arpa systemd[1]: Starting Load AppArmor profiles...
+[    3.265907] lit.home.arpa systemd[1]: Starting Create List of Static Device Nodes...
+[    3.267849] lit.home.arpa systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    3.269932] lit.home.arpa systemd[1]: Starting Load Kernel Module configfs...
+[    3.272224] lit.home.arpa systemd[1]: Starting Load Kernel Module drm...
+[    3.278764] lit.home.arpa systemd[1]: Starting Load Kernel Module fuse...
+[    3.280167] lit.home.arpa systemd[1]: File System Check on Root Device was skipped because of an unmet condition check (ConditionPathIsReadWrite=!/).
+[    3.282078] lit.home.arpa systemd[1]: Starting Journal Service...
+[    3.290442] lit.home.arpa systemd[1]: Starting Load Kernel Modules...
+[    3.299798] lit.home.arpa systemd[1]: Starting Remount Root and Kernel File Systems...
+[    3.300629] lit.home.arpa kernel: fuse: init (API version 7.37)
+[    3.301213] lit.home.arpa systemd[1]: Repartition Root Disk was skipped because no trigger condition checks were met.
+[    3.302329] lit.home.arpa systemd[1]: Starting Coldplug All udev Devices...
+[    3.305384] lit.home.arpa systemd[1]: Mounted POSIX Message Queue File System.
+[    3.306686] lit.home.arpa systemd[1]: Mounted Kernel Debug File System.
+[    3.308074] lit.home.arpa systemd[1]: Finished Create List of Static Device Nodes.
+[    3.309242] lit.home.arpa kernel: audit: type=1130 audit(1672774262.085:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.309578] lit.home.arpa systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    3.309874] lit.home.arpa systemd[1]: Finished Load Kernel Module configfs.
+[    3.311153] lit.home.arpa kernel: audit: type=1130 audit(1672774262.089:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@configfs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.311180] lit.home.arpa kernel: audit: type=1131 audit(1672774262.089:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@configfs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.311535] lit.home.arpa systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    3.311715] lit.home.arpa systemd[1]: Finished Load Kernel Module drm.
+[    3.312795] lit.home.arpa kernel: audit: type=1130 audit(1672774262.089:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@drm comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.312822] lit.home.arpa kernel: audit: type=1131 audit(1672774262.089:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@drm comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.313356] lit.home.arpa systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    3.313528] lit.home.arpa systemd[1]: Finished Load Kernel Module fuse.
+[    3.318660] lit.home.arpa kernel: audit: type=1130 audit(1672774262.095:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@fuse comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.318689] lit.home.arpa kernel: audit: type=1131 audit(1672774262.095:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=modprobe@fuse comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.324001] lit.home.arpa kernel: EXT4-fs (sda2): re-mounted. Quota mode: disabled.
+[    3.344182] lit.home.arpa systemd[1]: Mounting FUSE Control File System...
+[    3.346265] lit.home.arpa systemd[1]: Mounting Kernel Configuration File System...
+[    3.348701] lit.home.arpa systemd[1]: Finished Remount Root and Kernel File Systems.
+[    3.349819] lit.home.arpa kernel: audit: type=1130 audit(1672774262.125:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.349930] lit.home.arpa systemd[1]: First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[    3.352341] lit.home.arpa kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    3.354127] lit.home.arpa systemd[1]: Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+[    3.356673] lit.home.arpa systemd[1]: Starting Load/Save Random Seed...
+[    3.357988] lit.home.arpa systemd[1]: Create System Users was skipped because no trigger condition checks were met.
+[    3.359678] lit.home.arpa systemd[1]: Starting Create Static Device Nodes in /dev...
+[    3.364085] lit.home.arpa systemd[1]: Finished Load Kernel Modules.
+[    3.366049] lit.home.arpa kernel: audit: type=1130 audit(1672774262.142:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.366809] lit.home.arpa systemd[1]: Mounted FUSE Control File System.
+[    3.370425] lit.home.arpa systemd[1]: Starting Apply Kernel Variables...
+[    3.377947] lit.home.arpa systemd[1]: Mounted Kernel Configuration File System.
+[    3.408465] lit.home.arpa systemd[1]: Finished Apply Kernel Variables.
+[    3.430892] lit.home.arpa systemd[1]: Started Journal Service.
+[    3.460161] lit.home.arpa systemd-journald[191]: Received client request to flush runtime journal.
+[    3.777265] lit.home.arpa kernel: random: crng init done
+[    3.975664] lit.home.arpa kernel: input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input3
+[    3.987550] lit.home.arpa kernel: ACPI: button: Power Button [PBTN]
+[    3.987628] lit.home.arpa kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input4
+[    3.997501] lit.home.arpa kernel: ACPI: button: Power Button [PWRF]
+[    4.129361] lit.home.arpa kernel: tpm_tis 00:03: 1.2 TPM (device-id 0xB, rev-id 16)
+[    4.178685] lit.home.arpa kernel: e1000e: Intel(R) PRO/1000 Network Driver
+[    4.178691] lit.home.arpa kernel: e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    4.178980] lit.home.arpa kernel: e1000e 0000:00:19.0: Interrupt Throttling Rate (ints/sec) set to dynamic conservative mode
+[    4.189861] lit.home.arpa kernel: input: PC Speaker as /devices/platform/pcspkr/input/input5
+[    4.205850] lit.home.arpa kernel: device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    4.317287] lit.home.arpa kernel: Key type trusted registered
+[    4.353216] lit.home.arpa kernel: gpio_ich gpio_ich.2.auto: GPIO from 952 to 1023
+[    4.366519] lit.home.arpa kernel: EXT4-fs (sda3): mounted filesystem with ordered data mode. Quota mode: disabled.
+[    4.377508] lit.home.arpa kernel: usbcore: registered new interface driver usbhid
+[    4.377512] lit.home.arpa kernel: usbhid: USB HID core driver
+[    4.389021] lit.home.arpa kernel: iTCO_vendor_support: vendor-support=0
+[    4.390720] lit.home.arpa kernel: Key type encrypted registered
+[    4.409475] lit.home.arpa kernel: input: KYE Genius USB Wheel Mouse as /devices/pci0000:00/0000:00:1a.1/usb4/4-2/4-2:1.0/0003:0458:0003.0001/input/input7
+[    4.423026] lit.home.arpa kernel: hid-generic 0003:0458:0003.0001: input,hidraw0: USB HID v1.00 Mouse [KYE Genius USB Wheel Mouse] on usb-0000:00:1a.1-2/input0
+[    4.543148] lit.home.arpa kernel: e1000e 0000:00:19.0 eth0: (PCI Express:2.5GT/s:Width x1) 18:a9:05:f2:b1:f6
+[    4.543159] lit.home.arpa kernel: e1000e 0000:00:19.0 eth0: Intel(R) PRO/1000 Network Connection
+[    4.543189] lit.home.arpa kernel: e1000e 0000:00:19.0 eth0: MAC: 8, PHY: 8, PBA No: FFFFFF-0FF
+[    4.555855] lit.home.arpa kernel: iTCO_wdt iTCO_wdt.1.auto: unable to reset NO_REBOOT flag, device disabled by hardware/BIOS
+[    4.563082] lit.home.arpa kernel: e1000e 0000:00:19.0 enp0s25: renamed from eth0
+[    4.609596] lit.home.arpa kernel: mousedev: PS/2 mouse device common for all mice
+[    4.721088] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC662 rev1: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:line
+[    4.721093] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[    4.721096] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x1b/0x0/0x0/0x0/0x0)
+[    4.721098] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0
+[    4.721099] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:    inputs:
+[    4.721101] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:      Mic=0x19
+[    4.721103] lit.home.arpa kernel: snd_hda_codec_realtek hdaudioC0D0:      Line=0x18
+[    4.733105] lit.home.arpa kernel: input: HDA Intel Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input8
+[    4.733161] lit.home.arpa kernel: input: HDA Intel Line as /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
+[    4.733206] lit.home.arpa kernel: input: HDA Intel Line Out as /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
+[    4.733249] lit.home.arpa kernel: input: HDA Intel Front Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+[    4.869565] lit.home.arpa kernel: Adding 1047548k swap on /dev/mapper/swap.  Priority:-2 extents:1 across:1047548k SSFS
+[    5.271624] lit.home.arpa kernel: input: ImPS/2 Generic Wheel Mouse as /devices/platform/i8042/serio1/input/input6
+[    8.134777] lit.home.arpa kernel: e1000e 0000:00:19.0 enp0s25: NIC Link is Up 1000 Mbps Full Duplex, Flow Control: Rx/Tx
+[    8.134914] lit.home.arpa kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
