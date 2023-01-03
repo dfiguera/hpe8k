@@ -6,17 +6,20 @@ Tailored Linux kernel configuration for ![HP Compaq 8000 Elite Ultra-slim PC](ht
 The main goal of this repository is to get a kernel without too much cruft.
 
 ## Some snippets from dmesg:
-`DMI: Hewlett-Packard HP Compaq 8000 Elite USDT PC/3648h, BIOS 786G7 v01.02 10/22/2009
+```
+DMI: Hewlett-Packard HP Compaq 8000 Elite USDT PC/3648h, BIOS 786G7 v01.02 10/22/2009
 smpboot: CPU0: Intel(R) Core(TM)2 Duo CPU     E8500  @ 3.16GHz (family: 0x6, model: 0x17, stepping: 0xa)
 pci 0000:00:00.0: Intel Q45/Q43 Chipset
 pci 0000:00:00.0: detected gtt size: 2097152K total, 262144K mappable
 pci 0000:00:00.0: detected 32768K stolen memory
 i915 0000:00:02.0: [drm] fb0: i915drmfb frame buffer device
 tpm_tis 00:03: 1.2 TPM (device-id 0xB, rev-id 16)
-e1000e: Intel(R) PRO/1000 Network Driver`
+e1000e: Intel(R) PRO/1000 Network Driver
+```
 
 ## Some dmesg entries that look troubling or that can use some kernel config changes:
-`ACPI BIOS Warning (bug): Optional FADT field Pm2ControlBlock has valid Address but zero Length: 0x0000000000000050/0x0 (20220331/tbfadt-615)
+```
+ACPI BIOS Warning (bug): Optional FADT field Pm2ControlBlock has valid Address but zero Length: 0x0000000000000050/0x0 (20220331/tbfadt-615)
 ACPI BIOS Warning (bug): Invalid length for FADT/Pm2ControlBlock: 0, using default 8 (20220331/tbfadt-669)
 Unknown kernel command line parameters "BOOT_IMAGE=../vmlinuz-linux-hpe8k spec_store_bypass_disable=on spectre_v2=on slub_debug=FZP", will be passed to user space.
 Memory: 3912404K/4087036K available (10241K kernel code, 963K rwdata, 2512K rodata, 1088K init, 1108K bss, 174372K reserved, 0K cma-reserved)
@@ -38,4 +41,5 @@ pci_bus 0000:10: extended config space not accessible
 pnp 00:07: disabling [mem 0x000cc600-0x000e3fff] because it overlaps 0000:00:02.0 BAR 6 [mem 0x000c0000-0x000dffff]
 intel_pstate: CPU model not supported
 ledtrig-cpu: registered to indicate activity on CPUs
-iTCO_wdt iTCO_wdt.1.auto: unable to reset NO_REBOOT flag, device disabled by hardware/BIOS`
+iTCO_wdt iTCO_wdt.1.auto: unable to reset NO_REBOOT flag, device disabled by hardware/BIOS
+```
