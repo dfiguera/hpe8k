@@ -1,3 +1,4 @@
+Module                  Size  Used by
 acpi_cpufreq           32768  0
 asn1_encoder           16384  1 trusted
 ata_generic            16384  0
@@ -46,7 +47,6 @@ mbcache                16384  1 ext4
 mei                   176128  3 mei_wdt,mei_me
 mei_me                 53248  1
 mei_wdt                16384  0
-Module                  Size  Used by
 mousedev               24576  0
 pata_acpi              16384  0
 pcspkr                 16384  0
