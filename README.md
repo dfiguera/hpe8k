@@ -43,3 +43,8 @@ intel_pstate: CPU model not supported
 ledtrig-cpu: registered to indicate activity on CPUs
 iTCO_wdt iTCO_wdt.1.auto: unable to reset NO_REBOOT flag, device disabled by hardware/BIOS
 ```
+
+<!--
+- [x] #739
+- [ ] Make sure CPU microcode gets patched
+-->
