@@ -1,0 +1,83 @@
+acpi_cpufreq           32768  0
+asn1_encoder           16384  1 trusted
+ata_generic            16384  0
+atkbd                  36864  0
+authenc                16384  1 essiv
+cbc                    16384  1
+cec                    86016  2 drm_display_helper,i915
+cfg80211             1122304  0
+coretemp               20480  0
+crc16                  16384  1 ext4
+crc32c_generic         16384  4
+crypto_user            16384  0
+dm_crypt               61440  1
+dmi_sysfs              20480  0
+dm_mod                196608  2 dm_crypt
+drm_buddy              20480  1 i915
+drm_display_helper    188416  1 i915
+e1000e                327680  0
+ehci_hcd              106496  1 ehci_pci
+ehci_pci               20480  0
+encrypted_keys         28672  1 dm_crypt
+essiv                  16384  1
+evdev                  28672  3
+ext4                 1019904  2
+fuse                  176128  1
+gpio_ich               16384  0
+hp_wmi                 28672  0
+i8042                  49152  0
+i915                 3158016  1
+input_leds             16384  0
+intel_agp              24576  0
+intel_gtt              28672  2 intel_agp,i915
+intel_pmc_bxt          16384  1 iTCO_wdt
+ip_tables              36864  0
+irqbypass              16384  1 kvm
+iTCO_vendor_support    16384  1 iTCO_wdt
+iTCO_wdt               16384  0
+jbd2                  192512  1 ext4
+kvm                  1163264  1 kvm_intel
+kvm_intel             389120  0
+ledtrig_audio          16384  1 snd_hda_codec_generic
+libps2                 20480  2 atkbd,psmouse
+lpc_ich                28672  0
+mac_hid                16384  0
+mbcache                16384  1 ext4
+mei                   176128  3 mei_wdt,mei_me
+mei_me                 53248  1
+mei_wdt                16384  0
+Module                  Size  Used by
+mousedev               24576  0
+pata_acpi              16384  0
+pcspkr                 16384  0
+platform_profile       16384  1 hp_wmi
+psmouse               212992  0
+rc_core                69632  1 cec
+rfkill                 40960  3 hp_wmi,cfg80211
+serio                  28672  6 serio_raw,atkbd,psmouse,i8042
+serio_raw              20480  0
+sg                     49152  0
+snd                   135168  9 snd_hda_codec_generic,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm
+snd_hda_codec         196608  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec_realtek
+snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
+snd_hda_codec_realtek   172032  1
+snd_hda_core          122880  4 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+snd_hda_intel          61440  1
+snd_hwdep              16384  1 snd_hda_codec
+snd_intel_dspcfg       36864  1 snd_hda_intel
+snd_intel_sdw_acpi     20480  1 snd_intel_dspcfg
+snd_pcm               176128  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_timer              49152  1 snd_pcm
+soundcore              16384  1 snd
+sparse_keymap          16384  1 hp_wmi
+tee                    40960  1 trusted
+tpm_infineon           20480  0
+trusted                49152  2 encrypted_keys,dm_crypt
+ttm                    94208  1 i915
+uhci_hcd               57344  0
+usbhid                 73728  0
+video                  65536  1 i915
+vivaldi_fmap           16384  1 atkbd
+wmi                    45056  2 hp_wmi,wmi_bmof
+wmi_bmof               16384  0
+x_tables               61440  1 ip_tables
